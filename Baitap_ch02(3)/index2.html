@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Scores App</title>
+    <script>
+      var score1;
+      var score2;
+      var score3;
+      var total = 0;
+
+      score1 = prompt("Enter test score");
+      score1 = parseInt(score1);
+
+      score2 = prompt("Enter test score");
+      score2 = parseInt(score2);
+
+      score3 = prompt("Enter test score");
+      score3 = parseInt(score3);
+
+      total = score1 + score2 + score3;
+
+      //   caculate average
+      average = parseInt(total / 3);
+    </script>
+  </head>
+  <body>
+    <script>
+      document.write("<h1>The test scores app</h1>");
+      document.write(
+        "Score1 = " +
+          score1 +
+          "<br>" +
+          "Score2 = " +
+          score2 +
+          "<br>" +
+          "Score3 = " +
+          score3 +
+          "<br><br>" +
+          "Avaerage = " +
+          average +
+          "<br><br>"
+      );
+    </script>
+  </body>
+</html>

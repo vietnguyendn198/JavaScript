@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Caculate Miles Per Gallon Application</title>
+    <script>
+      var again = "y";
+      do {
+        var miles = prompt("Enter miles driven");
+        miles = parseFloat(miles);
+        var gallons = prompt("Enter gallons of gas used");
+        gallons = parseInt(gallons);
+        if (!isNaN(miles) && miles > 0 && !isNaN(gallons) && gallons > 0) {
+          var mpg = miles / gallons;
+          mpg = parseInt(mpg);
+          alert("miles per gallon = " + mpg);
+        } else {
+          alert("one or both entries are invalid");
+        }
+        again = prompt("Repeat entries?", "y");
+      } while (again == "y");
+      alert("Miles per gallon = " + mpg);
+    </script>
+  </head>
+  <body>
+    <h1>Thanks You for using...</h1>
+  </body>
+</html>

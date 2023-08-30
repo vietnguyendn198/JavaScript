@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="array_bai1.css" />
+    <script>
+      var $ = function (id) {
+        return document.getElementById(id);
+      };
+
+      var calculateDay = function (month) {
+        var days = 0;
+
+        switch (month) {
+          case 1:
+          case 3:
+          case 5:
+          case 7:
+          case 9:
+          case 11:
+          case 12:
+            days = 31;
+            break;
+          case 2:
+            days = 28;
+            break;
+          default:
+            days = 30;
+            break;
+        }
+        return days;
+      };
+
+      var processEntries = function () {
+        var month = parseInt($("selectMonth").value);
+        $("days_value").value = calculateDay(month);
+      };
+      window.onload = function () {
+        $("calculate").onclick = processEntries;
+      };
+    </script>
+  </head>
+  <body>
+    <main>
+      <h1>Day Of Month Calculate</h1>
+
+      <label for="month">Nhap thang can tinh:</label>
+      <input type="text" id="selectMonth" />
+      <span id="month_error">*</span><br />
+
+      <label for="day">So ngay trong thang:</label>
+      <input type="text" id="days_value" />
+      <span id="days_error">*</span><br />
+
+      <label>&nbsp;</label>
+      <input type="button" id="calculate" value="Calculate MPG" /><br />
+      <label>&nbsp;</label>
+      <input type="button" id="clear_entries" value="clear_entries" /><br />
+    </main>
+  </body>
+</html>

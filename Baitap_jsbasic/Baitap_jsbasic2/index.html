@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Caculate Miles Per Gallon Application</title>
+    <script>
+      var math = parseInt(prompt("Enter math:"));
+      var physics = parseInt(prompt("Enter physics:"));
+      var chemistry = parseInt(prompt("Enter chemistry:"));
+      var average;
+
+      average = (math + physics + chemistry) / 3;
+
+      document.write("the average is :" + average);
+    </script>
+  </head>
+  <body>
+    <script>
+      if (average >= 8) {
+        document.write("rank a");
+      } else if (average >= 6.5) {
+        document.write("rank b");
+      } else if (average >= 5) {
+        document.write("rank c");
+      } else if (average < 5) {
+        document.write("rank d");
+      }
+    </script>
+  </body>
+</html>

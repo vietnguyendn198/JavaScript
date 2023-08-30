@@ -1,0 +1,21 @@
+<script>
+  var number = parseInt(prompt("Nhap so phan tu") + number);
+
+  var total_array = [];
+  for (var i = 0; i < number; i++) {
+    total_array[i] = i + 1;
+  }
+  document.write("danh sach " + total_array.length + "<br>");
+
+  for (var i = 0; i < total_array.length; i++) {
+    document.write(total_array[i] + "<br>");
+  }
+
+  var average = 0;
+  var total = 0;
+  for (var i = 0; i < total_array.length; i++) {
+    total = total + total_array[i];
+    average = total / total_array.length;
+  }
+  document.write("trung binh cong so phan tu la" + average);
+</script>
